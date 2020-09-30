@@ -12,10 +12,17 @@
 					</div>
 					<div id="navbar">
 						<ul class="nav navbar-nav">
-							<form class="form-inline ">
+							<!-- <form class="form-inline ">
 						    <input class="form-control " type="text" placeholder="Search">
 						    <button class="btn btn-secondary " type="submit" >Search</button>
-						    </form>
+						    </form> -->
+						    <?php
+							    echo form_open('search/execute_search');
+
+							    echo form_input(array('name'=>'search'));
+
+							    echo form_submit('search_submit','Search');
+							?> 
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="<?php echo base_url() ?>">Home</a></li>	
